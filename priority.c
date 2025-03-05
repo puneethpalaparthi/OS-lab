@@ -33,3 +33,13 @@ for(i=1;i<n;i++)
 wt[i] = wt[i-1] + bt[i-1];
 tat[i] = tat[i-1] + bt[i];
 wtavg = wtavg + wt[i];
+tatavg = tatavg + tat[i];
+}
+printf("\nPROCESS\t\tPRIORITY\tBURST TIME\tWAITING 
+TIME\tTURNAROUND TIME");
+for(i=0;i<n;i++)
+printf("\n%d \t\t %d \t\t %d \t\t %d \t\t %d ",p[i],pri[i],bt[i],wt[i],tat[i]);
+printf("\nAverage Waiting Time is --- %f",wtavg/n);
+printf("\nAverage Turnaround Time is --- %f",tatavg/n);
+getch();
+}
